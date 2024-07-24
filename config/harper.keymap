@@ -21,12 +21,12 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N1             &kp N2     &kp N3    &kp N4    &kp N5            &kp N6      &kp N7     &kp N8     &kp N9   &kp N0     &kp BACKSPACE
-&kp TAB    &kp Q              &kp W      &kp E     &kp R     &kp T             &kp Y       &kp U      &kp I      &kp O    &kp P      &kp LEFT_BRACKET
-&kp TAB    &kp A              &kp S      &kp D     &kp F     &kp G             &kp H       &kp J      &kp K      &kp L    &kp SEMI   &kp SQT
-&kp LSHFT  &kp Z              &kp X      &kp C     &kp V     &kp B             &kp C_MUTE  &none      &kp N      &kp M    &kp COMMA  &kp DOT
-&kp FSLH   &kp RIGHT_BRACKET  &kp LCTRL  &kp LGUI  &kp LALT  &mo ADJ  &mo RSE  &mo LWR     &kp SPACE  &kp ENTER  &mo RSE  &mo 1      &kp RIGHT_CONTROL  &kp RALT
-                                                                               &kp RGUI                                                                 &kp ENTER
+&kp ESC    &kp N1             &kp N2     &kp N3    &kp N4  &kp N5                 &kp N6      &kp N7     &kp N8     &kp N9   &kp N0     &kp BACKSPACE
+&kp TAB    &kp Q              &kp W      &kp E     &kp R   &kp T                  &kp Y       &kp U      &kp I      &kp O    &kp P      &kp LEFT_BRACKET
+&kp TAB    &kp A              &kp S      &kp D     &kp F   &kp G                  &kp H       &kp J      &kp K      &kp L    &kp SEMI   &kp SQT
+&kp LSHFT  &kp Z              &kp X      &kp C     &kp V   &kp B                  &kp C_MUTE  &none      &kp N      &kp M    &kp COMMA  &kp DOT
+&kp FSLH   &kp RIGHT_BRACKET  &kp LCTRL  &kp LGUI  &mo 3   &kp LEFT_ALT  &mo RSE  &mo LWR     &kp SPACE  &kp ENTER  &mo RSE  &mo 1      &kp RIGHT_CONTROL  &kp RALT
+                                                                                  &kp RGUI                                                                 &kp ENTER
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -38,7 +38,7 @@
 &kp GRAVE  &kp N1     &kp N2     &kp N3       &kp N4    &kp N5              &kp N6      &kp N7     &kp N8           &kp N9    &kp N0    &kp F12
 &kp TAB    &kp EXCL   &kp AT     &kp HASH     &kp DLLR  &kp PRCNT           &kp CARET   &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp PIPE
 &kp LSHFT  &kp EQUAL  &kp MINUS  &kp KP_PLUS  &kp LBRC  &kp RBRC            &kp C_MUTE  &none      &kp LBKT         &kp RBKT  &kp SEMI  &kp COLON
-&kp BSLH   &kp RSHFT  &kp LCTRL  &kp LGUI     &kp LALT  &mo ADJ    &mo RSE  &mo LWR     &kp SPACE  &kp SPACE        &mo RSE   &mo 1     &kp RIGHT_CONTROL  &kp RALT
+&kp BSLH   &kp RSHFT  &kp LCTRL  &kp LGUI     &mo 3     &kp LALT   &mo RSE  &mo LWR     &kp SPACE  &kp ENTER        &mo RSE   &mo 1     &kp RIGHT_CONTROL  &kp RALT
                                                                             &kp RGUI                                                                       &kp RCTRL
             >;
 
@@ -47,12 +47,12 @@
 
         raise_layer {
             bindings = <
-&none       &none       &none      &none        &none        &none             &kp PAGE_UP  &kp PAGE_DOWN  &none      &none      &none  &kp DEL
-&none       &kp INS     &kp PSCRN  &kp K_CMENU  &none        &none             &kp HOME     &kp END        &kp UP     &none      &none  &kp BACKSPACE
-&none       &none       &none      &none        &none        &none             &none        &kp LEFT       &kp DOWN   &kp RIGHT  &none  &none
-&kp LSHIFT  &kp K_UNDO  &kp K_CUT  &kp K_COPY   &kp K_PASTE  &none             &none        &none          &none      &none      &none  &none
-&none       &none       &kp LCTRL  &kp LGUI     &kp LALT     &mo ADJ  &mo RSE  &mo LWR      &kp SPACE      &kp SPACE  &mo RSE    &mo 1  &kp RIGHT_CONTROL  &kp RALT
-                                                                               &kp RGUI                                                                    &kp RCTRL
+&none       &kp RC(B)   &kp RS(RC(B))  &none        &none        &none                  &kp PAGE_UP  &kp PAGE_DOWN  &none      &none      &none  &kp DEL
+&none       &kp INS     &kp PSCRN      &kp K_CMENU  &none        &none                  &kp HOME     &kp END        &kp UP     &none      &none  &kp BACKSPACE
+&none       &none       &none          &none        &none        &none                  &none        &kp LEFT       &kp DOWN   &kp RIGHT  &none  &none
+&kp LSHIFT  &kp K_UNDO  &kp K_CUT      &kp K_COPY   &kp K_PASTE  &none                  &none        &none          &none      &none      &none  &none
+&none       &none       &kp LCTRL      &kp LGUI     &mo 3        &kp LEFT_ALT  &mo RSE  &mo LWR      &kp SPACE      &kp ENTER  &mo RSE    &mo 1  &kp RIGHT_CONTROL  &kp RALT
+                                                                                        &kp RGUI                                                                    &kp RCTRL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -64,7 +64,7 @@
 &rgb_ug RGB_TOG    &rgb_ug RGB_BRD                  &rgb_ug RGB_BRI                    &rgb_ug RGB_SPD                   &rgb_ug RGB_SPI                  &rgb_ug RGB_EFF                            &none     &none      &kp UP     &none      &none    &none
 &ext_power EP_TOG  &rgb_ug RGB_COLOR_HSB(0,100,50)  &rgb_ug RGB_COLOR_HSB(218,100,50)  &rgb_ug RGB_COLOR_HSB(120,97,50)  &rgb_ug RGB_COLOR_HSB(60,0,100)  &rgb_ug RGB_COLOR_HSB(64,100,52)           &none     &kp LEFT   &kp DOWN   &kp RIGHT  &none    &none
 &sys_reset         &bootloader                      &none                              &none                             &ind IND_ON                      &ind BAT_ST                                &none     &none      &none      &none      &none    &none
-&none              &none                            &kp LCTRL                          &kp LGUI                          &kp LALT                         &mo ADJ                           &mo RSE  &mo LWR   &kp SPACE  &kp SPACE  &mo RSE    &mo ADJ  &mo LWR  &kp RALT
+&none              &none                            &kp LCTRL                          &kp LGUI                          &mo 3                            &kp LALT                          &mo RSE  &mo LWR   &kp SPACE  &kp SPACE  &mo RSE    &mo ADJ  &mo LWR  &kp RALT
                                                                                                                                                                                                      &kp RGUI                                                     &kp RCTRL
             >;
 
