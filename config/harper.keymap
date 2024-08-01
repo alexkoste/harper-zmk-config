@@ -16,6 +16,43 @@
 &mt { quick_tap_ms = <200>; };
 
 / {
+    macros {
+        CtrlM1: CtrlM1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(M) &kp KP_NUMBER_1>;
+            label = "CTRLM1";
+        };
+
+        CtrlM2: CtrlM2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(M) &kp KP_NUMBER_2>;
+            label = "CTRLM2";
+        };
+
+        CtrlM3: CtrlM3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(M) &kp KP_NUMBER_3>;
+            label = "CTRLM3";
+        };
+
+        CtrlM4: CtrlM4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(M) &kp KP_NUMBER_4>;
+            label = "CTRLM4";
+        };
+
+        CtrlM5: CtrlM5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(M) &kp KP_NUMBER_5>;
+            label = "CTRLM5";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -31,7 +68,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         lower_layer {
@@ -49,8 +86,8 @@
 
         raise_layer {
             bindings = <
-&none       &kp RC(B)   &kp RS(RC(B))  &none        &none        &none                  &kp PAGE_UP  &kp PAGE_DOWN  &none      &none      &none  &kp DEL
-&none       &kp INS     &kp PSCRN      &kp K_CMENU  &none        &none                  &kp HOME     &kp END        &kp UP     &none      &none  &kp BACKSPACE
+&none       &kp RC(B)   &kp RS(RC(B))  &CtrlM1      &CtrlM2      &CtrlM3                &kp PAGE_UP  &kp PAGE_DOWN  &none      &none      &none  &kp DEL
+&none       &kp INS     &kp PSCRN      &kp K_CMENU  &CtrlM4      &CtrlM5                &kp HOME     &kp END        &kp UP     &none      &none  &kp BACKSPACE
 &none       &none       &none          &none        &none        &none                  &none        &kp LEFT       &kp DOWN   &kp RIGHT  &none  &none
 &kp LSHIFT  &kp K_UNDO  &kp K_CUT      &kp K_COPY   &kp K_PASTE  &none                  &none        &none          &none      &none      &none  &none
 &none       &none       &kp LCTRL      &kp LGUI     &mo 3        &kp LEFT_ALT  &mo RSE  &mo LWR      &kp SPACE      &kp ENTER  &mo RSE    &mo 1  &kp RIGHT_CONTROL  &kp RALT
@@ -59,7 +96,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
+                <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         adjust_layer {
